@@ -17,7 +17,7 @@ module Kaminari
         @template, @options = template, options.dup
         @param_name = @options.delete(:param_name)
         @theme = @options[:theme] ? "#{@options.delete(:theme)}/" : ''
-        @params = @options[:params] ? template.params.merge(@options.delete :params) : template.params
+        @params = @options[:params] ? @options[:params] : template.params
       end
 
       def to_s(locals = {}) #:nodoc:
